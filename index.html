@@ -110,149 +110,7 @@
             opacity: 0.9;
         }
 
-        .admin-controls {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-
-        .admin-controls.active {
-            display: block;
-        }
-
-        .admin-btn {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .admin-btn:hover {
-            background: #218838;
-            transform: translateY(-2px);
-        }
-
-        .admin-btn.danger {
-            background: #dc3545;
-        }
-
-        .admin-btn.danger:hover {
-            background: #c82333;
-        }
-
-        .course-card.edit-mode .delete-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #dc3545;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .course-card.edit-mode .delete-btn:hover {
-            background: #c82333;
-            transform: scale(1.1);
-        }
-
-        .course-card.edit-mode .edit-btn {
-            position: absolute;
-            top: 10px;
-            right: 50px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .course-card.edit-mode .edit-btn:hover {
-            background: #0056b3;
-            transform: scale(1.1);
-        }
-
-        .course-card.edit-mode .status-btn {
-            position: absolute;
-            top: 10px;
-            right: 130px;
-            background: #17a2b8;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .course-card.edit-mode .status-btn:hover {
-            background: #138496;
-            transform: scale(1.1);
-        }
-
-        .status-complete {
-            background: #28a745 !important;
-            color: white !important;
-        }
-
-        .editable {
-            cursor: pointer;
-            position: relative;
-        }
-
-        .editable:hover {
-            background: rgba(255,255,0,0.1);
-            border-radius: 4px;
-        }
-
-        .admin-status {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #28a745;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            z-index: 1000;
-            display: none;
-        }
-
-        .admin-status.active {
-            display: block;
-        }
-
+  
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -480,9 +338,7 @@
     <!-- Settings Button -->
     <button class="settings-btn" onclick="openSettings()">⚙️ Settings</button>
 
-    <!-- Admin Status Indicator -->
-    <div class="admin-status" id="adminStatus">🔓 Admin Mode Active</div>
-
+  
     <!-- Password Modal -->
     <div class="modal" id="settingsModal">
         <div class="modal-content">
@@ -495,14 +351,6 @@
         </div>
     </div>
 
-    <!-- Admin Controls Panel -->
-    <div class="admin-controls" id="adminControls">
-        <button class="admin-btn" onclick="addNewCourse()">➕ Add Course</button>
-        <button class="admin-btn" onclick="saveChanges()">💾 Save Changes</button>
-        <button class="admin-btn" onclick="loadSavedChanges()">📂 Load Saved</button>
-        <button class="admin-btn" onclick="resetToOriginal()">🔄 Reset to Original</button>
-        <button class="admin-btn danger" onclick="exitAdminMode()">🔒 Exit Admin</button>
-    </div>
 
     <div class="container">
         <div class="header">
@@ -806,7 +654,7 @@
             </div>
         </div>
 
-        <div class="courses-section">
+        <div class="courses-section" id="developmentSection" style="display: none;">
             <h2 class="section-title">
                 Courses in Development
                 <span class="status-badge">13 courses</span>
@@ -1102,15 +950,11 @@
     </div>
 
     <script>
-        let isAdminMode = false;
-        let originalData = {};
-        let modifiedData = {};
+        let developmentVisible = false;
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
-            loadFromLocalStorage();
             makeElementsEditable();
-            autoSave(); // Start auto-save functionality
         });
 
         function openSettings() {
@@ -1128,10 +972,10 @@
 
             // Secure password check
             if (password === 'admin123') {
-                isAdminMode = true;
+                developmentVisible = true;
                 closeSettings();
-                enableAdminMode();
-                showNotification('Admin mode activated!', 'success');
+                showDevelopmentSection();
+                showNotification('Development courses visible!', 'success');
             } else {
                 showNotification('Invalid password!', 'error');
                 document.getElementById('passwordInput').value = '';
@@ -1139,361 +983,12 @@
             }
         }
 
-        function enableAdminMode() {
-            document.getElementById('adminStatus').classList.add('active');
-            document.getElementById('adminControls').classList.add('active');
-
-            // Add edit controls to all course cards
-            const courseCards = document.querySelectorAll('.course-card');
-            courseCards.forEach(card => {
-                card.classList.add('edit-mode');
-                addEditControls(card);
-            });
+        function showDevelopmentSection() {
+            document.getElementById('developmentSection').style.display = 'block';
         }
 
-        function exitAdminMode() {
-            isAdminMode = false;
-            document.getElementById('adminStatus').classList.remove('active');
-            document.getElementById('adminControls').classList.remove('active');
-
-            // Remove edit controls
-            const courseCards = document.querySelectorAll('.course-card');
-            courseCards.forEach(card => {
-                card.classList.remove('edit-mode');
-                removeEditControls(card);
-            });
-
-            showNotification('Admin mode deactivated', 'info');
-        }
-
-        function addEditControls(card) {
-            // Add delete button
-            if (!card.querySelector('.delete-btn')) {
-                const deleteBtn = document.createElement('button');
-                deleteBtn.className = 'delete-btn';
-                deleteBtn.innerHTML = '×';
-                deleteBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    if (confirm('Delete this course?')) {
-                        card.remove();
-                        updateStats();
-                        // Auto-save after deletion
-                        saveChanges();
-                    }
-                };
-                card.appendChild(deleteBtn);
-            }
-
-            // Add edit button
-            if (!card.querySelector('.edit-btn')) {
-                const editBtn = document.createElement('button');
-                editBtn.className = 'edit-btn';
-                editBtn.innerHTML = '✏️';
-                editBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    enableEditModeForCard(card);
-                };
-                card.appendChild(editBtn);
-            }
-
-            // Add status toggle button
-            if (!card.querySelector('.status-btn')) {
-                const statusBtn = document.createElement('button');
-                statusBtn.className = 'status-btn';
-                statusBtn.innerHTML = '🔄';
-                statusBtn.title = 'Toggle Status';
-                statusBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    toggleCourseStatus(card);
-                };
-                card.appendChild(statusBtn);
-            }
-        }
-
-        function removeEditControls(card) {
-            const deleteBtn = card.querySelector('.delete-btn');
-            const editBtn = card.querySelector('.edit-btn');
-            const statusBtn = card.querySelector('.status-btn');
-            if (deleteBtn) deleteBtn.remove();
-            if (editBtn) editBtn.remove();
-            if (statusBtn) statusBtn.remove();
-        }
-
-        function enableEditModeForCard(card) {
-            const courseLink = card.querySelector('.course-link');
-            const courseNumber = card.querySelector('.course-number');
-
-            // Make course link editable
-            if (courseLink && !courseLink.contentEditable) {
-                courseLink.contentEditable = true;
-                courseLink.classList.add('editable');
-                courseLink.focus();
-
-                courseLink.addEventListener('blur', function() {
-                    courseLink.contentEditable = false;
-                    courseLink.classList.remove('editable');
-                }, { once: true });
-            }
-
-            // Toggle translation status
-            const translationItems = card.querySelectorAll('.translation-item');
-            translationItems.forEach(item => {
-                item.style.cursor = 'pointer';
-                item.onclick = function() {
-                    toggleTranslationStatus(item);
-                };
-            });
-        }
-
-        function toggleTranslationStatus(item) {
-            if (!isAdminMode) return;
-
-            const indicator = item.querySelector('.translation-indicator');
-            const text = item.querySelector('span');
-
-            if (indicator.classList.contains('lang-complete')) {
-                indicator.classList.remove('lang-complete');
-                indicator.classList.add('lang-pending');
-                text.textContent = text.textContent.replace('✓', '✗');
-            } else {
-                indicator.classList.remove('lang-pending');
-                indicator.classList.add('lang-complete');
-                text.textContent = text.textContent.replace('✗', '✓');
-            }
-
-            updateStats();
-            // Auto-save translation changes
-            saveChanges();
-        }
-
-        function toggleCourseStatus(card) {
-            if (!isAdminMode) return;
-
-            const statusElement = card.querySelector('.course-status');
-
-            if (statusElement.classList.contains('status-feedback')) {
-                // Change from "Feedback Phase" to "Feedback Complete"
-                statusElement.classList.remove('status-feedback');
-                statusElement.classList.add('status-complete');
-                statusElement.textContent = 'Feedback Complete';
-            } else if (statusElement.classList.contains('status-complete')) {
-                // Change from "Feedback Complete" back to "Feedback Phase"
-                statusElement.classList.remove('status-complete');
-                statusElement.classList.add('status-feedback');
-                statusElement.textContent = 'Feedback Phase';
-            }
-
-            // Auto-save status change
-            saveChanges();
-        }
-
-        function addNewCourse() {
-            const section = prompt('Add to which section? (1 for Completed, 2 for In Development)', '2');
-            if (!section) return;
-
-            const targetSection = section === '1' ?
-                document.querySelector('.courses-section:first-child .courses-grid') :
-                document.querySelector('.courses-section:last-child .courses-grid');
-
-            if (!targetSection) return;
-
-            const courseCount = targetSection.children.length + 1;
-            const totalCourses = document.querySelectorAll('.course-card').length + 1;
-
-            const courseCard = document.createElement('div');
-            courseCard.className = section === '1' ? 'course-card' : 'course-card incomplete';
-
-            const courseName = prompt('Enter course name:', 'New Course');
-            if (!courseName) return;
-
-            courseCard.innerHTML = `
-                <div class="course-header">
-                    <span class="course-number">Course ${totalCourses}</span>
-                    <span class="course-status ${section === '1' ? 'status-feedback' : 'status-pending'}">${section === '1' ? 'Feedback Phase' : 'In Development'}</span>
-                </div>
-                <a href="#" class="course-link">${courseName}</a>
-                <div class="translation-status">
-                    <div class="translation-item">
-                        <div class="translation-indicator lang-pending"></div>
-                        <span>French ✗</span>
-                    </div>
-                    <div class="translation-item">
-                        <div class="translation-indicator lang-pending"></div>
-                        <span>English ✗</span>
-                    </div>
-                    <div class="translation-item">
-                        <div class="translation-indicator lang-pending"></div>
-                        <span>Arabic ✗</span>
-                    </div>
-                </div>
-            `;
-
-            targetSection.appendChild(courseCard);
-
-            if (isAdminMode) {
-                courseCard.classList.add('edit-mode');
-                addEditControls(courseCard);
-                makeElementsEditable();
-            }
-
-            updateStats();
-            // Auto-save new course
-            saveChanges();
-            showNotification('Course added successfully!', 'success');
-        }
-
-        function updateStats() {
-            const totalCourses = document.querySelectorAll('.course-card').length;
-            const completedCourses = document.querySelectorAll('.course-card:not(.incomplete)').length;
-            const inDevCourses = document.querySelectorAll('.course-card.incomplete').length;
-
-            let totalTranslationsNeeded = 0;
-            const translationIndicators = document.querySelectorAll('.translation-indicator.lang-pending');
-            translationIndicators.forEach(indicator => {
-                totalTranslationsNeeded++;
-            });
-
-            document.querySelector('.stat-number').textContent = totalCourses;
-            document.querySelectorAll('.stat-number')[1].textContent = completedCourses;
-            document.querySelectorAll('.stat-number')[2].textContent = inDevCourses;
-            document.querySelectorAll('.stat-number')[3].textContent = totalTranslationsNeeded;
-        }
-
-        function saveChanges() {
-            const courses = [];
-            document.querySelectorAll('.course-card').forEach(card => {
-                const course = {
-                    number: card.querySelector('.course-number').textContent,
-                    name: card.querySelector('.course-link').textContent,
-                    link: card.querySelector('.course-link').href,
-                    status: card.querySelector('.course-status').textContent,
-                    type: card.classList.contains('incomplete') ? 'development' : 'completed',
-                    translations: []
-                };
-
-                card.querySelectorAll('.translation-item').forEach(item => {
-                    const indicator = item.querySelector('.translation-indicator');
-                    const langText = item.querySelector('span').textContent;
-                    const lang = langText.split(' ')[0];
-                    const status = indicator.classList.contains('lang-complete') ? 'complete' : 'pending';
-                    course.translations.push({ language: lang, status: status });
-                });
-
-                courses.push(course);
-            });
-
-            localStorage.setItem('coursesData', JSON.stringify(courses));
-            showNotification('Changes saved successfully!', 'success');
-        }
-
-        function loadFromLocalStorage() {
-            // DISABLED - Never load saved data on page load to keep original 26 courses
-            console.log('Auto-loading disabled to preserve original courses');
-        }
-
-        function restoreCoursesFromData(courses) {
-            // DISABLED - Never restore from saved data to prevent corruption
-            console.log('Course restoration disabled to prevent data loss');
-            return;
-        }
-
-        function autoSave() {
-            // Auto-save every 30 seconds
-            setInterval(() => {
-                if (isAdminMode) {
-                    saveChanges();
-                    console.log('Auto-saved changes');
-                }
-            }, 30000);
-        }
-
-        function resetToOriginal() {
-            if (confirm('Are you sure you want to reset to the original 25 courses? This will clear all saved changes.')) {
-                // Clear localStorage
-                localStorage.removeItem('coursesData');
-
-                // Reload the page to restore original courses
-                location.reload();
-            }
-        }
-
-        function loadSavedChanges() {
-            const savedData = localStorage.getItem('coursesData');
-            if (!savedData) {
-                showNotification('No saved changes found!', 'error');
-                return;
-            }
-
-            if (confirm('Load saved changes? This will replace all current courses with your saved data.')) {
-                try {
-                    const courses = JSON.parse(savedData);
-
-                    // Clear existing courses
-                    document.querySelectorAll('.courses-grid').forEach(grid => {
-                        grid.innerHTML = '';
-                    });
-
-                    // Restore courses
-                    courses.forEach((courseData, index) => {
-                        const targetSection = courseData.type === 'development' ?
-                            document.querySelector('.courses-section:last-child .courses-grid') :
-                            document.querySelector('.courses-section:first-child .courses-grid');
-
-                        if (!targetSection) return;
-
-                        const courseCard = document.createElement('div');
-                        courseCard.className = courseData.type === 'development' ? 'course-card incomplete' : 'course-card';
-
-                        const frenchStatus = courseData.translations && courseData.translations.find(t => t.language === 'French') ? courseData.translations.find(t => t.language === 'French') : { status: 'pending' };
-                        const englishStatus = courseData.translations && courseData.translations.find(t => t.language === 'English') ? courseData.translations.find(t => t.language === 'English') : { status: 'pending' };
-                        const arabicStatus = courseData.translations && courseData.translations.find(t => t.language === 'Arabic') ? courseData.translations.find(t => t.language === 'Arabic') : { status: 'pending' };
-
-                        // Handle status classes correctly
-                        let statusClass = courseData.type === 'development' ? 'status-pending' : 'status-feedback';
-                        if (courseData.status === 'Feedback Complete') {
-                            statusClass = 'status-complete';
-                        }
-
-                        courseCard.innerHTML = `
-                            <div class="course-header">
-                                <span class="course-number">${courseData.number || `Course ${index + 1}`}</span>
-                                <span class="course-status ${statusClass}">${courseData.status || (courseData.type === 'development' ? 'In Development' : 'Feedback Phase')}</span>
-                            </div>
-                            <a href="${courseData.link || '#'}" class="course-link" ${courseData.link && courseData.link !== '#' ? 'target="_blank"' : ''}>${courseData.name || 'Unnamed Course'}</a>
-                            <div class="translation-status">
-                                <div class="translation-item">
-                                    <div class="translation-indicator ${frenchStatus.status === 'complete' ? 'lang-complete' : 'lang-pending'}"></div>
-                                    <span>French ${frenchStatus.status === 'complete' ? '✓' : '✗'}</span>
-                                </div>
-                                <div class="translation-item">
-                                    <div class="translation-indicator ${englishStatus.status === 'complete' ? 'lang-complete' : 'lang-pending'}"></div>
-                                    <span>English ${englishStatus.status === 'complete' ? '✓' : '✗'}</span>
-                                </div>
-                                <div class="translation-item">
-                                    <div class="translation-indicator ${arabicStatus.status === 'complete' ? 'lang-complete' : 'lang-pending'}"></div>
-                                    <span>Arabic ${arabicStatus.status === 'complete' ? '✓' : '✗'}</span>
-                                </div>
-                            </div>
-                        `;
-
-                        targetSection.appendChild(courseCard);
-                    });
-
-                    // If admin mode is active, add controls to restored courses
-                    if (isAdminMode) {
-                        document.querySelectorAll('.course-card').forEach(card => {
-                            card.classList.add('edit-mode');
-                            addEditControls(card);
-                        });
-                    }
-
-                    updateStats();
-                    showNotification('Loaded ' + courses.length + ' courses from saved data!', 'success');
-                } catch (e) {
-                    console.error('Error loading saved data:', e);
-                    showNotification('Error loading saved data!', 'error');
-                }
-            }
+        function hideDevelopmentSection() {
+            document.getElementById('developmentSection').style.display = 'none';
         }
 
         function makeElementsEditable() {
@@ -1542,7 +1037,7 @@
             @keyframes fadeInOut {
                 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
                 20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-                80% { opacity: 1; transform: enter(-50%, -50%) scale(1); }
+                80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
                 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
             }
         `;
