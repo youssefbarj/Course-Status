@@ -325,6 +325,58 @@
             font-style: italic;
         }
 
+
+        .iframe-status {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .iframe-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .iframe-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .iframe-indicator:hover {
+            transform: scale(1.2);
+        }
+
+        .iframe-added {
+            background: #28a745;
+        }
+
+        .iframe-not-added {
+            background: #dc3545;
+        }
+
+        .iframe-label {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .translation-link {
+            color: #2B2D52;
+            text-decoration: underline;
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 3px;
+            transition: background-color 0.2s ease;
+        }
+
+        .translation-link:hover {
+            background-color: rgba(43, 45, 82, 0.1);
+            text-decoration: none;
+        }
+
         @media (max-width: 768px) {
             .courses-grid {
                 grid-template-columns: 1fr;
@@ -357,6 +409,16 @@
         </div>
     </div>
 
+    <!-- Alert Modal -->
+    <div class="modal" id="alertModal" onclick="if(event.target === this) closeAlertModal()">
+        <div class="modal-content">
+            <h2 id="alertModalTitle">Alert</h2>
+            <p id="alertModalMessage"></p>
+            <div class="modal-buttons">
+                <button class="modal-btn primary" onclick="closeAlertModal()">OK</button>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="header">
@@ -371,603 +433,28 @@
 
         <div class="stats">
             <div class="stat-card">
-                <span class="stat-number">24</span>
+                <span class="stat-number" id="total-courses">24</span>
                 <span class="stat-label">Total Courses</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number">19</span>
+                <span class="stat-number" id="first-rollout-count">19</span>
                 <span class="stat-label">First Rollout Courses</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number">5</span>
+                <span class="stat-number" id="second-rollout-count">5</span>
                 <span class="stat-label">Second Rollout</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number">55</span>
+                <span class="stat-number" id="translations-needed">55</span>
                 <span class="stat-label">Translations Needed</span>
             </div>
         </div>
-
-        <!-- Default 5 Courses Section -->
-        <div class="courses-section">
-            <h2 class="section-title">
-                Default 5 Courses
-                <span class="status-badge">5 courses</span>
-            </h2>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course D1</span>
-                        <span class="course-status status-complete">Available</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/S402ZW" target="_blank" class="course-link">GESTION DES RENDEZ-VOUS</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course D2</span>
-                        <span class="course-status status-complete">Available</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/CHWWSM" target="_blank" class="course-link">LE MÉTIER D'ESTHÉTICIENNE</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course D3</span>
-                        <span class="course-status status-complete">Available</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/IS8XPI" target="_blank" class="course-link">Réussir sa Recherche d'Emploi</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course D4</span>
-                        <span class="course-status status-complete">Available</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/TC1JXG" target="_blank" class="course-link">Réussir la communication professionelle</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course D5</span>
-                        <span class="course-status status-complete">Available</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/28N5ST" target="_blank" class="course-link">Technique de Vente et Intégration Professionnelle</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="courses-container">
+            <!-- Courses will be dynamically loaded here -->
         </div>
-
-        <!-- First Rollout Courses Section -->
-        <div class="courses-section">
-            <h2 class="section-title">
-                First Rollout Courses (Feedback Implementation Phase)
-                <span class="status-badge">14 courses</span>
-            </h2>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 1</span>
-                        <span class="course-status status-complete">Feedback Complete</span>
-                    </div>
-                    <a href="https://languagetoggle.vercel.app" target="_blank" class="course-link">Extension de Cils</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>English ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 2</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/RGN3M9" target="_blank" class="course-link">MICRONEEDLING</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 3</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/KB3D80" target="_blank" class="course-link">MICROBLADING</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 4</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/V7VJ8Q" target="_blank" class="course-link">Combinaison MICROBLADING et MICROSHADING</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 5</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/T7CXD4" target="_blank" class="course-link">Lip Blush</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 6</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/W3P9FQ" target="_blank" class="course-link">Soin de visage</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 7</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/HOAVD0" target="_blank" class="course-link">Soin HydraFacial</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 8</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/IS5O67" target="_blank" class="course-link">Brow lift & Lamination</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 9</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/X2GM8Y" target="_blank" class="course-link">LASH LIFTING</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 10</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/V1I8BA" target="_blank" class="course-link">Kobido</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-header">
-                        <span class="course-number">Course 11</span>
-                        <span class="course-status status-feedback">Feedback Phase</span>
-                    </div>
-                    <a href="https://coassemble.com/learn/MU3HVL" target="_blank" class="course-link">Combinaison LASH LIFTING et Brow lift & Lamination</a>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-complete"></div>
-                            <span>French ✓</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 12</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">La Reconstruction du Sourcil</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 13</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">Makeup</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 14</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">Ongles en gel</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Second Rollout Courses Section (Password Protected) -->
-        <div class="courses-section" id="secondRolloutSection" style="display: none;">
-            <h2 class="section-title">
-                Second Rollout Courses (In Development)
-                <span class="status-badge">5 courses</span>
-            </h2>
-            <div class="courses-grid">
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 13</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">LES BASES DU MAQUILLAGE MORPHOLOGIQUE</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 14</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">MASSAGE RELAXANT</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 15</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">MASSAGE AMINCISSANT</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 16</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">Hair Removal Techniques (Épilation Halawa + Épilation au fil)</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 17</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">MASSAGE THAÏ TRADITIONNEL</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card incomplete">
-                    <div class="course-header">
-                        <span class="course-number">Course 18</span>
-                        <span class="course-status status-pending">In Development</span>
-                    </div>
-                    <div class="course-link course-placeholder">MASSAGE AUX POCHONS D'HERBES</div>
-                    <div class="translation-status">
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>French ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>English ✗</span>
-                        </div>
-                        <div class="translation-item">
-                            <div class="translation-indicator lang-pending"></div>
-                            <span>Arabic ✗</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
       </div>
 
+    <script src="app.js?v=19"></script>
     <script>
         let secondRolloutVisible = false;
 
@@ -979,6 +466,9 @@
         function openSettings() {
             document.getElementById('settingsModal').style.display = 'block';
             document.getElementById('passwordInput').focus();
+            if (window.courseDashboard) {
+                // Settings UI removed
+            }
         }
 
         function closeSettings() {
@@ -1022,6 +512,7 @@
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     closeSettings();
+                    closeAlertModal();
                 }
             });
         }
@@ -1050,6 +541,22 @@
             }, 2000);
         }
 
+        function showAlertModal(title, message) {
+            const modal = document.getElementById('alertModal');
+            const content = modal.querySelector('.modal-content');
+            document.getElementById('alertModalTitle').textContent = title;
+            document.getElementById('alertModalMessage').textContent = message;
+            modal.style.display = 'block';
+            content.classList.add('animate');
+        }
+
+        function closeAlertModal() {
+            const modal = document.getElementById('alertModal');
+            const content = modal.querySelector('.modal-content');
+            modal.style.display = 'none';
+            content.classList.remove('animate');
+        }
+
         // Add fade animation
         const style = document.createElement('style');
         style.textContent = `
@@ -1058,6 +565,18 @@
                 20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
                 80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
                 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            }
+            @keyframes popIn {
+                0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+                100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            }
+            .modal-content.animate {
+                animation: popIn 0.3s ease-out;
+            }
+            #alertModalMessage {
+                margin: 15px 0;
+                line-height: 1.5;
+                word-wrap: break-word;
             }
         `;
         document.head.appendChild(style);
