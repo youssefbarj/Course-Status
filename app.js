@@ -575,8 +575,25 @@ class CourseDashboard {
         setText('courses-available', coursesAvailable);
         setText('courses-in-feedback', coursesInFeedback);
         setText('courses-in-development', coursesInDevelopment);
-        setText('translations-needed', translationsNeeded);
         setText('iframe-added', iframeAdded);
+
+        // Calculate and update translation progress
+        const totalPossibleTranslations = totalCourses * 3; // 3 languages per course
+        const translationsCompleted = totalPossibleTranslations - translationsNeeded;
+        const translationPercentage = totalPossibleTranslations > 0
+            ? Math.round((translationsCompleted / totalPossibleTranslations) * 100)
+            : 0;
+
+        const translationNumberEl = document.getElementById('translations-needed');
+        const translationLabelEl = translationNumberEl?.closest('.stat-card')?.querySelector('.stat-label');
+
+        if (translationNumberEl) {
+            translationNumberEl.textContent = `${translationPercentage}%`;
+            translationNumberEl.title = `${translationsCompleted}/${totalPossibleTranslations} translations complete`;
+        }
+        if (translationLabelEl) {
+            translationLabelEl.textContent = 'Translation Progress';
+        }
     }
 
     editTranslationUrl(courseId, language, currentUrl) {
