@@ -549,7 +549,7 @@ class CourseDashboard {
                 // Count by status
                 if (course.status === 'Feedback Phase') {
                     feedbackPhaseCount++;
-                } else if (course.status === 'Feedback Complete') {
+                } else if (course.status === 'Feedback Complete' || course.status === 'Available') {
                     feedbackCompleteCount++;
                 } else if (course.status === 'In Development') {
                     coursesInDevelopment++;
