@@ -1,0 +1,627 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-02-25T00:15:05.637728",
+  "sections": [
+    {
+      "id": "default",
+      "title": "Default 5 Courses",
+      "description": "5 courses",
+      "courses": [
+        {
+          "id": "default-d1",
+          "number": "Course D1",
+          "title": "GESTION DES RENDEZ-VOUS",
+          "status": "Available",
+          "coassembleUrl": "https://coassemble.com/learn/S402ZW",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/S402ZW"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/gestion-des-rendez-vous"
+        },
+        {
+          "id": "default-d2",
+          "number": "Course D2",
+          "title": "LE MÉTIER D'ESTHÉTICIENNE",
+          "status": "Available",
+          "coassembleUrl": "https://coassemble.com/learn/CHWWSM",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/CHWWSM"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/estheticienne-plus-quun-metier"
+        },
+        {
+          "id": "default-d3",
+          "number": "Course D3",
+          "title": "Réussir sa Recherche d'Emploi",
+          "status": "Available",
+          "coassembleUrl": "https://coassemble.com/learn/IS8XPI",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/IS8XPI"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/reussir-sa-recherche-demploi"
+        },
+        {
+          "id": "default-d4",
+          "number": "Course D4",
+          "title": "Réussir la communication professionelle",
+          "status": "Available",
+          "coassembleUrl": "https://coassemble.com/learn/TC1JXG",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/TC1JXG"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/reussir-la-communication-professionelle"
+        },
+        {
+          "id": "default-d5",
+          "number": "Course D5",
+          "title": "Technique de Vente et Intégration Professionnelle",
+          "status": "Available",
+          "coassembleUrl": "https://coassemble.com/learn/28N5ST",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/28N5ST"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/technique-de-vente-et-integration-professionnelle"
+        }
+      ]
+    },
+    {
+      "id": "first-rollout",
+      "title": "First Rollout Courses (Feedback Implementation Phase)",
+      "description": "16 courses",
+      "courses": [
+        {
+          "id": "first-rollout-1",
+          "number": "Course 1",
+          "title": "Extension de Cils",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/B54E5A",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/B54E5A"
+            },
+            "english": {
+              "available": true,
+              "url": "https://coassemble.com/learn/PCM72R"
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/lash-extensions"
+        },
+        {
+          "id": "first-rollout-2",
+          "number": "Course 2",
+          "title": "MICRONEEDLING",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/RGN3M9",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/RGN3M9"
+            },
+            "english": {
+              "available": true,
+              "url": "https://coassemble.com/learn/CLBNUT"
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/microneedling"
+        },
+        {
+          "id": "first-rollout-3",
+          "number": "Course 3",
+          "title": "MICROBLADING",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/KB3D80",
+          "iframeInPlatform": true,
+          "iframeUrl": "https://e-lumy.com/course/microblading",
+          "practiceExerciseUrl": "https://coassemble.com/learn/387MM6",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/KB3D80"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          }
+        },
+        {
+          "id": "first-rollout-4",
+          "number": "Course 4",
+          "title": "Combinaison MICROBLADING et MICROSHADING",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/V7VJ8Q",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/V7VJ8Q"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/microshading"
+        },
+        {
+          "id": "first-rollout-5",
+          "number": "Course 5",
+          "title": "Lip Blush",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/T7CXD4",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/T7CXD4"
+            },
+            "english": {
+              "available": true,
+              "url": "https://coassemble.com/learn/L0U2PW"
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/lip-blush"
+        },
+        {
+          "id": "first-rollout-6",
+          "number": "Course 6",
+          "title": "Soin de visage",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/W3P9FQ",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/W3P9FQ"
+            },
+            "english": {
+              "available": true,
+              "url": "https://coassemble.com/learn/T36D94"
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/basic-facial"
+        },
+        {
+          "id": "first-rollout-7",
+          "number": "Course 7",
+          "title": "Soin HydraFacial",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/HOAVD0",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/HOAVD0"
+            },
+            "english": {
+              "available": true,
+              "url": "https://coassemble.com/learn/XWKVOQ"
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/facial-hydrafacial"
+        },
+        {
+          "id": "first-rollout-8",
+          "number": "Course 8",
+          "title": "Brow lift & Lamination",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/IS5O67",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/IS5O67"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/brow-lift"
+        },
+        {
+          "id": "first-rollout-9",
+          "number": "Course 9",
+          "title": "LASH LIFTING",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/X2GM8Y",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/X2GM8Y"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/lash-lift"
+        },
+        {
+          "id": "first-rollout-10",
+          "number": "Course 10",
+          "title": "Kobido",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/V1I8BA",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/V1I8BA"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/kobido"
+        },
+        {
+          "id": "first-rollout-11",
+          "number": "Course 11",
+          "title": "Combinaison LASH LIFTING et Brow lift",
+          "status": "Feedback Phase",
+          "coassembleUrl": "https://coassemble.com/learn/MU3HVL",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/MU3HVL"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/brow-lift-lash-lift"
+        },
+        {
+          "id": "first-rollout-12",
+          "number": "Course 12",
+          "title": "La Reconstruction du Sourcil",
+          "status": "Feedback Phase",
+          "coassembleUrl": "https://coassemble.com/learn/M1MFM3",
+          "iframeInPlatform": true,
+          "iframeUrl": "https://e-lumy.com/course/maitrisez-la-reconstruction-du-sourcil",
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/M1MFM3"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          }
+        },
+        {
+          "id": "first-rollout-13",
+          "number": "Course 13",
+          "title": "Makeup Artist",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/c/MG7ZU6",
+          "iframeInPlatform": true,
+          "iframeUrl": "https://e-lumy.com/course/makeup-artist",
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/c/MG7ZU6"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          }
+        },
+        {
+          "id": "first-rollout-14",
+          "number": "Course 14",
+          "title": "Ongles en gel",
+          "status": "In Development",
+          "coassembleUrl": "",
+          "iframeInPlatform": false,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": false,
+              "url": ""
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": ""
+        },
+        {
+          "id": "first-rollout-15",
+          "number": "Course 15",
+          "title": "MASSAGE RELAXANT",
+          "status": "Feedback Phase",
+          "coassembleUrl": "https://coassemble.com/learn/30T1YE",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": false,
+              "url": ""
+            },
+            "english": {
+              "available": true,
+              "url": "https://coassemble.com/learn/30T1YE"
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/massage-relaxant-in-progress"
+        },
+        {
+          "id": "first-rollout-16",
+          "number": "Course 16",
+          "title": "Hair Removal Techniques (Épilation Halawa + Épilation au fil)",
+          "status": "Feedback Phase",
+          "coassembleUrl": "https://coassemble.com/learn/97APP8",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/97APP8"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course/epilations-traditionnelles-maitrisez-le-fil-et-la-halawa"
+        }
+      ]
+    },
+    {
+      "id": "second-rollout",
+      "title": "Second Rollout Courses (In Development)",
+      "description": "4 courses",
+      "courses": [
+        {
+          "id": "second-rollout-13",
+          "number": "Course 13",
+          "title": "LES BASES DU MAQUILLAGE MORPHOLOGIQUE",
+          "status": "In Development",
+          "coassembleUrl": "",
+          "iframeInPlatform": false,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": false,
+              "url": ""
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": ""
+        },
+        {
+          "id": "second-rollout-15",
+          "number": "Course 15",
+          "title": "MASSAGE AMINCISSANT",
+          "status": "In Development",
+          "coassembleUrl": "",
+          "iframeInPlatform": false,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": false,
+              "url": ""
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": ""
+        },
+        {
+          "id": "second-rollout-17",
+          "number": "Course 17",
+          "title": "MASSAGE THAÏ TRADITIONNEL",
+          "status": "In Development",
+          "coassembleUrl": "",
+          "iframeInPlatform": false,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": false,
+              "url": ""
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": ""
+        },
+        {
+          "id": "second-rollout-18",
+          "number": "Course 18",
+          "title": "MASSAGE AUX POCHONS D'HERBES",
+          "status": "In Development",
+          "coassembleUrl": "",
+          "iframeInPlatform": false,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": false,
+              "url": ""
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": ""
+        }
+      ]
+    }
+  ]
+}
