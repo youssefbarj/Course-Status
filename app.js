@@ -532,6 +532,7 @@ class CourseDashboard {
 
     updateStats() {
         if (!this.coursesData) return;
+        console.log('updateStats called', this.coursesData.sections.length);
         let totalCourses = 0;
         let coursesAvailable = 0;
         let coursesInFeedback = 0;
@@ -565,6 +566,7 @@ class CourseDashboard {
                 });
             });
         });
+        console.log('Stats computed:', { totalCourses, coursesAvailable, coursesInFeedback, coursesInDevelopment, iframeAdded, translationsNeeded });
 
         // Update DOM
         const setText = (id, value) => {
