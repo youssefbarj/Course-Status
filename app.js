@@ -534,7 +534,6 @@ class CourseDashboard {
         if (!this.coursesData) return;
         console.log('updateStats called', this.coursesData.sections.length);
         let totalCourses = 0;
-        let coursesAvailable = 0;
         let feedbackPhaseCount = 0;
         let feedbackCompleteCount = 0;
         let coursesInDevelopment = 0;
@@ -548,9 +547,7 @@ class CourseDashboard {
             // Count by status and iframe
             section.courses.forEach(course => {
                 // Count by status
-                if (course.status === 'Available') {
-                    coursesAvailable++;
-                } else if (course.status === 'Feedback Phase') {
+                if (course.status === 'Feedback Phase') {
                     feedbackPhaseCount++;
                 } else if (course.status === 'Feedback Complete') {
                     feedbackCompleteCount++;
@@ -569,7 +566,7 @@ class CourseDashboard {
                 });
             });
         });
-        console.log('Stats computed:', { totalCourses, coursesAvailable, feedbackPhaseCount, feedbackCompleteCount, coursesInDevelopment, iframeAdded, translationsNeeded });
+        console.log('Stats computed:', { totalCourses, feedbackPhaseCount, feedbackCompleteCount, coursesInDevelopment, iframeAdded, translationsNeeded });
 
         // Update DOM
         const setText = (id, value) => {
@@ -577,7 +574,6 @@ class CourseDashboard {
             if (el) el.textContent = value;
         };
         setText('total-courses', totalCourses);
-        setText('courses-available', coursesAvailable);
         setText('courses-in-feedback', feedbackPhaseCount);
         setText('feedback-complete', feedbackCompleteCount);
         setText('courses-in-development', coursesInDevelopment);
