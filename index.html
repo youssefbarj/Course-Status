@@ -389,6 +389,84 @@
             .stats {
                 gap: 15px;
             }
+
+            .suggestions-section {
+                padding: 15px;
+            }
+
+            .suggestions-content {
+                padding: 15px;
+            }
+        }
+
+        /* Suggestions Section */
+        .suggestions-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .suggestions-header {
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+        }
+
+        .suggestions-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .suggestions-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .suggestions-content {
+            padding: 20px;
+            color: white;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .suggestions-content.show {
+            display: block;
+        }
+
+        .suggestions-content h4 {
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #8B7CB8;
+        }
+
+        .suggestions-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .suggestions-content li {
+            margin-bottom: 5px;
+        }
+
+        .suggestions-content strong {
+            color: #8B7CB8;
         }
     </style>
 </head>
@@ -437,24 +515,62 @@
                 <span class="stat-label">Total Courses</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number" id="first-rollout-count">19</span>
-                <span class="stat-label">First Rollout Courses</span>
+                <span class="stat-number" id="courses-available">5</span>
+                <span class="stat-label">Courses Available</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number" id="second-rollout-count">5</span>
-                <span class="stat-label">Second Rollout</span>
+                <span class="stat-number" id="courses-in-feedback">15</span>
+                <span class="stat-label">In Feedback Phase</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="courses-in-development">5</span>
+                <span class="stat-label">In Development</span>
             </div>
             <div class="stat-card">
                 <span class="stat-number" id="translations-needed">55</span>
                 <span class="stat-label">Translations Needed</span>
             </div>
+            <div class="stat-card">
+                <span class="stat-number" id="iframe-added">15</span>
+                <span class="stat-label">Iframe Added</span>
+            </div>
         </div>
+
+        <!-- Suggestions for Improvement -->
+        <div class="suggestions-section">
+            <div class="suggestions-header" onclick="toggleSuggestions()">
+                <h3>📝 Suggestions for Improvement</h3>
+                <button class="suggestions-toggle">▼</button>
+            </div>
+            <div class="suggestions-content" id="suggestionsContent">
+                <h4>Translation Challenge: Too many translations remaining</h4>
+                <p>If Oussama's suggestion of using AI translation is not working, we have alternative approaches:</p>
+
+                <h4>Option 1: Translation Toggle (like <a href="https://extensiondecil.vercel.app/" target="_blank" style="color: #8B7CB8;">extensiondecil.vercel.app</a>)</h4>
+                <p>Create 2-3 course iframes that users can switch between for different languages.</p>
+                <ul>
+                    <li><strong>Pros:</strong> Effectively tackles the translation issue</li>
+                    <li><strong>Cons:</strong> Time-consuming (each course duplicated 2-3 times), requires manual translation, needs technical debugging, not foolproof</li>
+                </ul>
+
+                <h4>Option 2: Curriculum Tabs</h4>
+                <p>Place all three manually translated courses in tabs within the e-learning curriculum.</p>
+                <ul>
+                    <li><strong>Pros:</strong> Organized presentation</li>
+                    <li><strong>Cons:</strong> User experience may feel lackluster compared to seamless toggling</li>
+                </ul>
+
+                <h4>Considerations</h4>
+                <p>This requires serious consideration due to the time investment and technical complexity. The translation toggle approach, while promising, needs debugging and may not be as smooth as initially envisioned.</p>
+            </div>
+        </div>
+
         <div id="courses-container">
             <!-- Courses will be dynamically loaded here -->
         </div>
       </div>
 
-    <script src="app.js?v=19"></script>
+    <script src="app.js?v=20"></script>
     <script>
         let secondRolloutVisible = false;
 
@@ -555,6 +671,13 @@
             const content = modal.querySelector('.modal-content');
             modal.style.display = 'none';
             content.classList.remove('animate');
+        }
+
+        function toggleSuggestions() {
+            const content = document.getElementById('suggestionsContent');
+            const toggleBtn = document.querySelector('.suggestions-toggle');
+            content.classList.toggle('show');
+            toggleBtn.textContent = content.classList.contains('show') ? '▲' : '▼';
         }
 
         // Add fade animation

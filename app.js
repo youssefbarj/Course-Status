@@ -533,21 +533,33 @@ class CourseDashboard {
     updateStats() {
         if (!this.coursesData) return;
         let totalCourses = 0;
-        let firstRolloutCount = 0;
-        let secondRolloutCount = 0;
+        let coursesAvailable = 0;
+        let coursesInFeedback = 0;
+        let coursesInDevelopment = 0;
         let translationsNeeded = 0;
+        let iframeAdded = 0;
 
         this.coursesData.sections.forEach(section => {
             const sectionCount = section.courses.length;
             totalCourses += sectionCount;
-            if (section.id === 'first-rollout') {
-                firstRolloutCount = sectionCount;
-            } else if (section.id === 'second-rollout') {
-                secondRolloutCount = sectionCount;
-            }
 
-            // Count translations needed
+            // Count by status and iframe
             section.courses.forEach(course => {
+                // Count by status
+                if (course.status === 'Available') {
+                    coursesAvailable++;
+                } else if (course.status === 'Feedback Phase' || course.status === 'Feedback Complete') {
+                    coursesInFeedback++;
+                } else if (course.status === 'In Development') {
+                    coursesInDevelopment++;
+                }
+
+                // Count iframe added
+                if (course.iframeInPlatform === true) {
+                    iframeAdded++;
+                }
+
+                // Count translations needed
                 Object.values(course.translations).forEach(trans => {
                     if (!trans.available) translationsNeeded++;
                 });
@@ -560,9 +572,11 @@ class CourseDashboard {
             if (el) el.textContent = value;
         };
         setText('total-courses', totalCourses);
-        setText('first-rollout-count', firstRolloutCount);
-        setText('second-rollout-count', secondRolloutCount);
+        setText('courses-available', coursesAvailable);
+        setText('courses-in-feedback', coursesInFeedback);
+        setText('courses-in-development', coursesInDevelopment);
         setText('translations-needed', translationsNeeded);
+        setText('iframe-added', iframeAdded);
     }
 
     editTranslationUrl(courseId, language, currentUrl) {
