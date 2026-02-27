@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-25T01:19:02.567523",
+  "lastUpdated": "2026-02-27T00:00:00.000000",
   "sections": [
     {
       "id": "default",
@@ -402,7 +402,7 @@
           "id": "first-rollout-12",
           "number": "Course 12",
           "title": "La Reconstruction du Sourcil",
-          "status": "Feedback Phase",
+          "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/M1MFM3",
           "iframeInPlatform": true,
           "iframeUrl": "https://e-lumy.com/course/maitrisez-la-reconstruction-du-sourcil",
