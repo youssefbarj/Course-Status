@@ -132,7 +132,7 @@
     {
       "id": "first-rollout",
       "title": "First Rollout Courses (Feedback Implementation Phase)",
-      "description": "16 courses",
+      "description": "17 courses",
       "courses": [
         {
           "id": "first-rollout-1",
@@ -517,17 +517,10 @@
             }
           },
           "iframeUrl": "https://e-lumy.com/course/epilations-traditionnelles-maitrisez-le-fil-et-la-halawa"
-        }
-      ]
-    },
-    {
-      "id": "second-rollout",
-      "title": "Second Rollout Courses (In Development)",
-      "description": "4 courses",
-      "courses": [
+        },
         {
-          "id": "second-rollout-13",
-          "number": "Course 13",
+          "id": "first-rollout-17",
+          "number": "Course 17",
           "title": "LES BASES DU MAQUILLAGE MORPHOLOGIQUE",
           "status": "In Development",
           "coassembleUrl": "",
@@ -548,7 +541,14 @@
             }
           },
           "iframeUrl": ""
-        },
+        }
+      ]
+    },
+    {
+      "id": "second-rollout",
+      "title": "Second Rollout Courses (In Development)",
+      "description": "3 courses",
+      "courses": [
         {
           "id": "second-rollout-15",
           "number": "Course 15",
