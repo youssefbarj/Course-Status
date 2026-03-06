@@ -192,16 +192,24 @@ class CourseDashboard {
         let itemsHTML = '';
 
         languages.forEach(lang => {
+            // Skip practice for default courses (D1-D5)
+            if (lang.key === 'practice' && course.id.includes('default-')) {
+                return; // Skip this iteration
+            }
+
             let available = false;
             let url = '';
             let title = '';
+            let isEmbeddedPractice = false;
 
             if (lang.key === 'practice') {
                 // Handle practice exercises
                 url = course.practiceExerciseUrl || '';
                 available = url.trim() !== '';
+                // Check if this is an embedded practice exercise (placeholder #)
+                isEmbeddedPractice = (url === '#');
                 title = this.editMode ? 'Click to edit practice exercise URL' :
-                        available ? 'View practice exercises' : 'No practice exercises available';
+                        available ? (isEmbeddedPractice ? 'Practice exercises available (embedded in platform)' : 'View practice exercises') : 'No practice exercises available';
             } else {
                 // Handle language translations
                 const translation = course.translations[lang.key];
@@ -217,7 +225,13 @@ class CourseDashboard {
             // Make link clickable if URL exists, always add data attributes for editing
             let linkHTML = '';
             if (url) {
-                linkHTML = `<a href="${url}" target="_blank" class="translation-link" data-course-id="${course.id}" data-language="${lang.key}" title="${title}">${lang.label} ${symbol}</a>`;
+                if (lang.key === 'practice' && isEmbeddedPractice) {
+                    // Embedded practice exercises - make non-clickable
+                    linkHTML = `<span class="translation-link embedded-practice" data-course-id="${course.id}" data-language="${lang.key}" title="${title}">${lang.label} ${symbol}</span>`;
+                } else {
+                    // Regular URL (external link)
+                    linkHTML = `<a href="${url}" target="_blank" class="translation-link" data-course-id="${course.id}" data-language="${lang.key}" title="${title}">${lang.label} ${symbol}</a>`;
+                }
             } else {
                 linkHTML = `<a href="#" class="translation-link no-url" data-course-id="${course.id}" data-language="${lang.key}" title="${title}">${lang.label} ${symbol}</a>`;
             }
@@ -293,6 +307,13 @@ class CourseDashboard {
         // Translation link click handlers (including practice exercises)
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('translation-link')) {
+                // Skip embedded practice exercises (non-clickable indicators)
+                if (e.target.classList.contains('embedded-practice')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return;
+                }
+
                 if (this.editMode) {
                     e.preventDefault();
                     const courseId = e.target.dataset.courseId;
