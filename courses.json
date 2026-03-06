@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-27T12:00:00.000000",
+  "lastUpdated": "2026-02-27T13:00:00.000000",
   "sections": [
     {
       "id": "default",
@@ -141,7 +141,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/B54E5A",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -165,7 +165,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/RGN3M9",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -213,7 +213,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/V7VJ8Q",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -237,7 +237,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/T7CXD4",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -261,7 +261,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/W3P9FQ",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -285,7 +285,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/HOAVD0",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -309,7 +309,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/IS5O67",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -333,7 +333,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/X2GM8Y",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -357,7 +357,7 @@
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/V1I8BA",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -406,7 +406,7 @@
           "coassembleUrl": "https://coassemble.com/learn/M1MFM3",
           "iframeInPlatform": true,
           "iframeUrl": "https://e-lumy.com/course/maitrisez-la-reconstruction-du-sourcil",
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -430,7 +430,7 @@
           "coassembleUrl": "https://coassemble.com/c/MG7ZU6",
           "iframeInPlatform": true,
           "iframeUrl": "https://e-lumy.com/course/makeup-artist",
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -501,7 +501,7 @@
           "status": "Feedback Phase",
           "coassembleUrl": "https://coassemble.com/learn/97APP8",
           "iframeInPlatform": true,
-          "practiceExerciseUrl": "",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
