@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-27T13:00:00.000000",
+  "lastUpdated": "2026-02-27T14:00:00.000000",
   "sections": [
     {
       "id": "default",
@@ -378,7 +378,7 @@
           "id": "first-rollout-11",
           "number": "Course 11",
           "title": "Combinaison LASH LIFTING et Brow lift",
-          "status": "Feedback Phase",
+          "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/MU3HVL",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
@@ -498,7 +498,7 @@
           "id": "first-rollout-16",
           "number": "Course 16",
           "title": "Hair Removal Techniques (Épilation Halawa + Épilation au fil)",
-          "status": "Feedback Phase",
+          "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/97APP8",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
