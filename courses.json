@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-27T14:00:00.000000",
+  "lastUpdated": "2026-03-15T12:00:00.000000",
   "sections": [
     {
       "id": "default",
@@ -132,7 +132,7 @@
     {
       "id": "first-rollout",
       "title": "First Rollout Courses (Feedback Implementation Phase)",
-      "description": "17 courses",
+      "description": "18 courses",
       "courses": [
         {
           "id": "first-rollout-1",
@@ -190,7 +190,7 @@
           "coassembleUrl": "https://coassemble.com/learn/KB3D80",
           "iframeInPlatform": true,
           "iframeUrl": "https://e-lumy.com/course/microblading",
-          "practiceExerciseUrl": "https://coassemble.com/learn/387MM6",
+          "practiceExerciseUrl": "#",
           "translations": {
             "french": {
               "available": true,
@@ -541,6 +541,30 @@
             }
           },
           "iframeUrl": ""
+        },
+        {
+          "id": "first-rollout-18",
+          "number": "Course 18",
+          "title": "Massage Berber",
+          "status": "Feedback Complete",
+          "coassembleUrl": "https://coassemble.com/learn/NSRSIH",
+          "iframeInPlatform": true,
+          "practiceExerciseUrl": "",
+          "translations": {
+            "french": {
+              "available": true,
+              "url": "https://coassemble.com/learn/NSRSIH"
+            },
+            "english": {
+              "available": false,
+              "url": ""
+            },
+            "arabic": {
+              "available": false,
+              "url": ""
+            }
+          },
+          "iframeUrl": "https://e-lumy.com/course-taking/maitrisez-le-massage-berbere-traditionnel"
         }
       ]
     },
