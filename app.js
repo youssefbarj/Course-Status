@@ -176,6 +176,7 @@ class CourseDashboard {
                 ${translationItems}
             </div>
             ${iframeStatus}
+            ${this.createBackupSection(course)}
         `;
 
         return card;
@@ -283,6 +284,16 @@ class CourseDashboard {
         `;
     }
 
+    createBackupSection(course) {
+        return `
+            <div class="backup-section">
+                <button class="backup-button" data-course-id="${course.id}" title="Copy course data to your workspace">
+                    📋 Copy to Workspace
+                </button>
+            </div>
+        `;
+    }
+
     applyPasswordProtection() {
         // Re-initialize password protection for second rollout section
         const passwordInput = document.getElementById('passwordInput');
@@ -385,6 +396,15 @@ class CourseDashboard {
                     }
                 }
                 // Otherwise, allow default behavior
+            }
+        });
+
+        // Backup button click handlers
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('backup-button')) {
+                e.preventDefault();
+                const courseId = e.target.dataset.courseId;
+                this.backupCourse(courseId);
             }
         });
     }
@@ -702,6 +722,52 @@ class CourseDashboard {
             }
         }
         return false;
+    }
+
+    backupCourse(courseId) {
+        if (!this.coursesData) return false;
+
+        // Find the course
+        let courseData = null;
+        for (const section of this.coursesData.sections) {
+            for (const course of section.courses) {
+                if (course.id === courseId) {
+                    courseData = course;
+                    break;
+                }
+            }
+            if (courseData) break;
+        }
+
+        if (!courseData) {
+            this.showNotification('Course not found', 'error');
+            return false;
+        }
+
+        // Create backup object with metadata
+        const backup = {
+            version: '1.0',
+            backupDate: new Date().toISOString(),
+            course: courseData,
+            source: 'Course Status Dashboard Backup'
+        };
+
+        // Convert to JSON
+        const jsonStr = JSON.stringify(backup, null, 2);
+        const blob = new Blob([jsonStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+
+        // Create download link
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `course-backup-${courseId}-${new Date().toISOString().slice(0,10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        this.showNotification(`Course ${courseId} backed up successfully`, 'success');
+        return true;
     }
 
     showNotification(message, type = 'info') {

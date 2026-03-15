@@ -363,6 +363,37 @@
             color: #555;
         }
 
+        .backup-section {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .backup-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #2B2D52;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .backup-button:hover {
+            background: #8B7CB8;
+            transform: translateY(-2px);
+        }
+
+        .backup-button:active {
+            transform: translateY(0);
+        }
+
         .translation-link {
             color: #2B2D52;
             text-decoration: underline;
@@ -571,7 +602,7 @@
         </div>
       </div>
 
-    <script src="app.js?v=32"></script>
+    <script src="app.js?v=33"></script>
     <script>
         let secondRolloutVisible = false;
 
