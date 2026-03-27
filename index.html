@@ -116,6 +116,25 @@
             color: white !important;
         }
 
+        .billing-badge {
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .billing-badge.billed {
+            background: #28a745;
+            color: white;
+        }
+
+        .billing-badge.unbilled {
+            background: #ffc107;
+            color: #333;
+        }
+
   
         .container {
             max-width: 1200px;
@@ -502,8 +521,6 @@
     </style>
 </head>
 <body>
-    <!-- Settings Button -->
-    <button class="settings-btn" onclick="openSettings()">⚙️ Settings</button>
 
   
     <!-- Password Modal -->
@@ -562,40 +579,8 @@
                 <span class="stat-number" id="translations-needed">33%</span>
                 <span class="stat-label">Translation Progress</span>
             </div>
-            <div class="stat-card">
-                <span class="stat-number" id="iframe-added">20</span>
-                <span class="stat-label">Iframe Added</span>
-            </div>
         </div>
 
-        <!-- Suggestions for Improvement -->
-        <div class="suggestions-section">
-            <div class="suggestions-header" onclick="toggleSuggestions()">
-                <h3>📝 Suggestions for Improvement</h3>
-                <button class="suggestions-toggle">▼</button>
-            </div>
-            <div class="suggestions-content" id="suggestionsContent">
-                <h4>Translation Challenge: Too many translations remaining</h4>
-                <p>If Oussama's suggestion of using AI translation is not working, we have alternative approaches:</p>
-
-                <h4>Option 1: Translation Toggle (like <a href="https://extensiondecil.vercel.app/" target="_blank" style="color: #8B7CB8;">extensiondecil.vercel.app</a>)</h4>
-                <p>Create 2-3 course iframes that users can switch between for different languages.</p>
-                <ul>
-                    <li><strong>Pros:</strong> Effectively tackles the translation issue</li>
-                    <li><strong>Cons:</strong> Time-consuming (each course duplicated 2-3 times), requires manual translation, needs technical debugging, not foolproof</li>
-                </ul>
-
-                <h4>Option 2: Curriculum Tabs</h4>
-                <p>Place all three manually translated courses in tabs within the e-learning curriculum.</p>
-                <ul>
-                    <li><strong>Pros:</strong> Organized presentation</li>
-                    <li><strong>Cons:</strong> User experience may feel lackluster compared to seamless toggling</li>
-                </ul>
-
-                <h4>Considerations</h4>
-                <p>This requires serious consideration due to the time investment and technical complexity. The translation toggle approach, while promising, needs debugging and may not be as smooth as initially envisioned. But I can handle it if I am given the greenlight to do it.</p>
-            </div>
-        </div>
 
         <div id="courses-container">
             <!-- Courses will be dynamically loaded here -->

@@ -101,7 +101,6 @@ class CourseDashboard {
         // Set ID for second rollout section for password protection
         if (section.id === 'second-rollout') {
             sectionDiv.id = 'secondRolloutSection';
-            sectionDiv.style.display = 'none'; // Hidden by default
         }
 
         // Section title
@@ -165,18 +164,25 @@ class CourseDashboard {
         // Iframe status (new feature)
         const iframeStatus = this.createIframeStatus(course);
 
+        // Billing badge
+        const billingBadge = course.billed
+            ? '<span class="billing-badge billed">Billed</span>'
+            : '<span class="billing-badge unbilled">Unbilled</span>';
+
         // Build card HTML
         card.innerHTML = `
             <div class="course-header">
                 <span class="course-number">${course.number}</span>
-                <span class="course-status ${statusClass}">${statusText}</span>
+                <div style="display:flex;gap:6px;align-items:center">
+                    ${billingBadge}
+                    <span class="course-status ${statusClass}">${statusText}</span>
+                </div>
             </div>
             ${courseLinkHTML}
             <div class="translation-status">
                 ${translationItems}
             </div>
             ${iframeStatus}
-            ${this.createBackupSection(course)}
         `;
 
         return card;
