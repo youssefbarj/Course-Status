@@ -268,7 +268,7 @@
     {
       "id": "unbilled",
       "title": "Unbilled Courses",
-      "description": "9 courses",
+      "description": "6 courses",
       "courses": [
         {
           "id": "first-rollout-12",
@@ -366,54 +366,6 @@
           "iframeUrl": "https://e-lumy.com/course/massage-relaxant-in-progress",
           "billed": false
         },
-        {
-          "id": "dev-18",
-          "number": "Course 18",
-          "title": "MASSAGE AMINCISSANT",
-          "status": "In Development",
-          "coassembleUrl": "",
-          "iframeInPlatform": false,
-          "practiceExerciseUrl": "",
-          "translations": {
-            "french": { "available": false, "url": "" },
-            "english": { "available": false, "url": "" },
-            "arabic": { "available": false, "url": "" }
-          },
-          "iframeUrl": "",
-          "billed": false
-        },
-        {
-          "id": "dev-19",
-          "number": "Course 19",
-          "title": "MASSAGE THAÏ TRADITIONNEL",
-          "status": "In Development",
-          "coassembleUrl": "",
-          "iframeInPlatform": false,
-          "practiceExerciseUrl": "",
-          "translations": {
-            "french": { "available": false, "url": "" },
-            "english": { "available": false, "url": "" },
-            "arabic": { "available": false, "url": "" }
-          },
-          "iframeUrl": "",
-          "billed": false
-        },
-        {
-          "id": "dev-20",
-          "number": "Course 20",
-          "title": "MASSAGE AUX POCHONS D'HERBES",
-          "status": "In Development",
-          "coassembleUrl": "",
-          "iframeInPlatform": false,
-          "practiceExerciseUrl": "",
-          "translations": {
-            "french": { "available": false, "url": "" },
-            "english": { "available": false, "url": "" },
-            "arabic": { "available": false, "url": "" }
-          },
-          "iframeUrl": "",
-          "billed": false
-        }
       ]
     }
   ]
