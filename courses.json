@@ -9,7 +9,7 @@
       "courses": [
         {
           "id": "default-d1",
-          "number": "Course D1",
+          "number": "Course 1",
           "title": "GESTION DES RENDEZ-VOUS",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/S402ZW",
@@ -25,7 +25,7 @@
         },
         {
           "id": "default-d2",
-          "number": "Course D2",
+          "number": "Course 2",
           "title": "LE MÉTIER D'ESTHÉTICIENNE",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/CHWWSM",
@@ -41,7 +41,7 @@
         },
         {
           "id": "default-d3",
-          "number": "Course D3",
+          "number": "Course 3",
           "title": "Réussir sa Recherche d'Emploi",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/IS8XPI",
@@ -57,7 +57,7 @@
         },
         {
           "id": "default-d4",
-          "number": "Course D4",
+          "number": "Course 4",
           "title": "Réussir la communication professionelle",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/TC1JXG",
@@ -73,7 +73,7 @@
         },
         {
           "id": "default-d5",
-          "number": "Course D5",
+          "number": "Course 5",
           "title": "Technique de Vente et Intégration Professionnelle",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/28N5ST",
@@ -89,7 +89,7 @@
         },
         {
           "id": "first-rollout-1",
-          "number": "Course 1",
+          "number": "Course 6",
           "title": "Extension de Cils",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/B54E5A",
@@ -105,7 +105,7 @@
         },
         {
           "id": "first-rollout-2",
-          "number": "Course 2",
+          "number": "Course 7",
           "title": "MICRONEEDLING",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/RGN3M9",
@@ -121,7 +121,7 @@
         },
         {
           "id": "first-rollout-3",
-          "number": "Course 3",
+          "number": "Course 8",
           "title": "MICROBLADING",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/KB3D80",
@@ -137,7 +137,7 @@
         },
         {
           "id": "first-rollout-4",
-          "number": "Course 4",
+          "number": "Course 9",
           "title": "Combinaison MICROBLADING et MICROSHADING",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/V7VJ8Q",
@@ -153,7 +153,7 @@
         },
         {
           "id": "first-rollout-5",
-          "number": "Course 5",
+          "number": "Course 10",
           "title": "Lip Blush",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/T7CXD4",
@@ -169,7 +169,7 @@
         },
         {
           "id": "first-rollout-6",
-          "number": "Course 6",
+          "number": "Course 11",
           "title": "Soin de visage",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/W3P9FQ",
@@ -185,7 +185,7 @@
         },
         {
           "id": "first-rollout-7",
-          "number": "Course 7",
+          "number": "Course 12",
           "title": "Soin HydraFacial",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/HOAVD0",
@@ -201,7 +201,7 @@
         },
         {
           "id": "first-rollout-8",
-          "number": "Course 8",
+          "number": "Course 13",
           "title": "Brow lift & Lamination",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/IS5O67",
@@ -217,7 +217,7 @@
         },
         {
           "id": "first-rollout-9",
-          "number": "Course 9",
+          "number": "Course 14",
           "title": "LASH LIFTING",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/X2GM8Y",
@@ -233,7 +233,7 @@
         },
         {
           "id": "first-rollout-10",
-          "number": "Course 10",
+          "number": "Course 15",
           "title": "Kobido",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/V1I8BA",
@@ -249,7 +249,7 @@
         },
         {
           "id": "first-rollout-11",
-          "number": "Course 11",
+          "number": "Course 16",
           "title": "Combinaison LASH LIFTING et Brow lift",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/MU3HVL",
@@ -272,7 +272,7 @@
       "courses": [
         {
           "id": "first-rollout-12",
-          "number": "Course 12",
+          "number": "Course 17",
           "title": "La Reconstruction du Sourcil",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/M1MFM3",
@@ -288,7 +288,7 @@
         },
         {
           "id": "first-rollout-13",
-          "number": "Course 13",
+          "number": "Course 18",
           "title": "Makeup Artist",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/c/MG7ZU6",
@@ -304,7 +304,7 @@
         },
         {
           "id": "first-rollout-14",
-          "number": "Course 14",
+          "number": "Course 19",
           "title": "Hair Removal Techniques (Épilation Halawa + Épilation au fil)",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/97APP8",
@@ -320,7 +320,7 @@
         },
         {
           "id": "first-rollout-15",
-          "number": "Course 15",
+          "number": "Course 20",
           "title": "Massage Berber",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/NSRSIH",
@@ -336,7 +336,7 @@
         },
         {
           "id": "dev-16",
-          "number": "Course 16",
+          "number": "Course 21",
           "title": "Ongles en gel",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/BBU7F3",
@@ -352,7 +352,7 @@
         },
         {
           "id": "dev-17",
-          "number": "Course 17",
+          "number": "Course 22",
           "title": "MASSAGE RELAXANT",
           "status": "Feedback Complete",
           "coassembleUrl": "https://coassemble.com/learn/30T1YE",
