@@ -338,12 +338,12 @@
           "id": "dev-16",
           "number": "Course 16",
           "title": "Ongles en gel",
-          "status": "In Development",
-          "coassembleUrl": "",
+          "status": "Feedback Phase",
+          "coassembleUrl": "https://coassemble.com/learn/BBU7F3",
           "iframeInPlatform": false,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": false, "url": "" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/BBU7F3" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
