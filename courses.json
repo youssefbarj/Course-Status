@@ -1,22 +1,22 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-26T22:00:00.000000",
+  "lastUpdated": "2026-04-08T00:00:00.000000",
   "sections": [
     {
       "id": "billed",
       "title": "Billed Courses",
-      "description": "16 courses",
+      "description": "22 courses",
       "courses": [
         {
           "id": "default-d1",
           "number": "Course 1",
           "title": "GESTION DES RENDEZ-VOUS",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/S402ZW",
+          "coassembleUrl": "https://coassemble.com/learn/FLWIHP",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/S402ZW" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/FLWIHP" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -28,11 +28,11 @@
           "number": "Course 2",
           "title": "LE MÉTIER D'ESTHÉTICIENNE",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/CHWWSM",
+          "coassembleUrl": "https://coassemble.com/learn/VX0SJE",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/CHWWSM" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/VX0SJE" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -44,11 +44,11 @@
           "number": "Course 3",
           "title": "Réussir sa Recherche d'Emploi",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/IS8XPI",
+          "coassembleUrl": "https://coassemble.com/learn/TXRTAZ",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/IS8XPI" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/TXRTAZ" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -60,11 +60,11 @@
           "number": "Course 4",
           "title": "Réussir la communication professionelle",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/TC1JXG",
+          "coassembleUrl": "https://coassemble.com/learn/J8C0IF",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/TC1JXG" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/J8C0IF" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -76,11 +76,11 @@
           "number": "Course 5",
           "title": "Technique de Vente et Intégration Professionnelle",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/28N5ST",
+          "coassembleUrl": "https://coassemble.com/learn/9NYHRG",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/28N5ST" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/9NYHRG" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -92,12 +92,12 @@
           "number": "Course 6",
           "title": "Extension de Cils",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/B54E5A",
+          "coassembleUrl": "https://coassemble.com/learn/Q94OZA",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/B54E5A" },
-            "english": { "available": true, "url": "https://coassemble.com/learn/PCM72R" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/Q94OZA" },
+            "english": { "available": true, "url": "https://coassemble.com/learn/JSH1VO" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/lash-extensions",
@@ -108,12 +108,12 @@
           "number": "Course 7",
           "title": "MICRONEEDLING",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/RGN3M9",
+          "coassembleUrl": "https://coassemble.com/learn/DC7IJL",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/RGN3M9" },
-            "english": { "available": true, "url": "https://coassemble.com/learn/NII8VY" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/DC7IJL" },
+            "english": { "available": true, "url": "https://coassemble.com/learn/WDBQG4" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/microneedling",
@@ -124,13 +124,13 @@
           "number": "Course 8",
           "title": "MICROBLADING",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/KB3D80",
+          "coassembleUrl": "https://coassemble.com/learn/8Z2W5S",
           "iframeInPlatform": true,
           "iframeUrl": "https://e-lumy.com/course/microblading",
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/KB3D80" },
-            "english": { "available": false, "url": "" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/8Z2W5S" },
+            "english": { "available": true, "url": "https://coassemble.com/learn/YF6GWX" },
             "arabic": { "available": false, "url": "" }
           },
           "billed": true
@@ -140,11 +140,11 @@
           "number": "Course 9",
           "title": "Combinaison MICROBLADING et MICROSHADING",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/V7VJ8Q",
+          "coassembleUrl": "https://coassemble.com/learn/FFZ18A",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/V7VJ8Q" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/FFZ18A" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -156,12 +156,12 @@
           "number": "Course 10",
           "title": "Lip Blush",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/T7CXD4",
+          "coassembleUrl": "https://coassemble.com/learn/523PHL",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/T7CXD4" },
-            "english": { "available": true, "url": "https://coassemble.com/learn/L0U2PW" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/523PHL" },
+            "english": { "available": true, "url": "https://coassemble.com/learn/T3LKHU" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/lip-blush",
@@ -172,12 +172,12 @@
           "number": "Course 11",
           "title": "Soin de visage",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/W3P9FQ",
+          "coassembleUrl": "https://coassemble.com/learn/X8IO18",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/W3P9FQ" },
-            "english": { "available": true, "url": "https://coassemble.com/learn/T36D94" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/X8IO18" },
+            "english": { "available": true, "url": "https://coassemble.com/learn/7Q1QS5" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/basic-facial",
@@ -188,12 +188,12 @@
           "number": "Course 12",
           "title": "Soin HydraFacial",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/HOAVD0",
+          "coassembleUrl": "https://coassemble.com/learn/6EYGJ3",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/HOAVD0" },
-            "english": { "available": true, "url": "https://coassemble.com/learn/XWKVOQ" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/6EYGJ3" },
+            "english": { "available": true, "url": "https://coassemble.com/learn/4ZP4RK" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/facial-hydrafacial",
@@ -204,11 +204,11 @@
           "number": "Course 13",
           "title": "Brow lift & Lamination",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/IS5O67",
+          "coassembleUrl": "https://coassemble.com/learn/6XYB88",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/IS5O67" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/6XYB88" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -220,11 +220,11 @@
           "number": "Course 14",
           "title": "LASH LIFTING",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/X2GM8Y",
+          "coassembleUrl": "https://coassemble.com/learn/RD7P57",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/X2GM8Y" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/RD7P57" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -236,11 +236,11 @@
           "number": "Course 15",
           "title": "Kobido",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/V1I8BA",
+          "coassembleUrl": "https://coassemble.com/learn/3MVU08",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/V1I8BA" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/3MVU08" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
@@ -252,39 +252,32 @@
           "number": "Course 16",
           "title": "Combinaison LASH LIFTING et Brow lift",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/MU3HVL",
+          "coassembleUrl": "https://coassemble.com/learn/ARKQ12",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/MU3HVL" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/ARKQ12" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/brow-lift-lash-lift",
           "billed": true
-        }
-      ]
-    },
-    {
-      "id": "unbilled",
-      "title": "Unbilled Courses",
-      "description": "6 courses",
-      "courses": [
+        },
         {
           "id": "first-rollout-12",
           "number": "Course 17",
           "title": "La Reconstruction du Sourcil",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/M1MFM3",
+          "coassembleUrl": "https://coassemble.com/learn/V69PH2",
           "iframeInPlatform": true,
           "iframeUrl": "https://e-lumy.com/course/maitrisez-la-reconstruction-du-sourcil",
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/M1MFM3" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/V69PH2" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
-          "billed": false
+          "billed": true
         },
         {
           "id": "first-rollout-13",
@@ -300,71 +293,71 @@
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
-          "billed": false
+          "billed": true
         },
         {
           "id": "first-rollout-14",
           "number": "Course 19",
           "title": "Hair Removal Techniques (Épilation Halawa + Épilation au fil)",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/97APP8",
+          "coassembleUrl": "https://coassemble.com/learn/622H8U",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "#",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/97APP8" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/622H8U" },
             "english": { "available": true, "url": "https://coassemble.com/learn/UO5XRC" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/epilations-traditionnelles-maitrisez-le-fil-et-la-halawa",
-          "billed": false
+          "billed": true
         },
         {
           "id": "first-rollout-15",
           "number": "Course 20",
           "title": "Massage Berber",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/NSRSIH",
+          "coassembleUrl": "https://coassemble.com/learn/3K1Y1F",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/NSRSIH" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/3K1Y1F" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course-taking/maitrisez-le-massage-berbere-traditionnel",
-          "billed": false
+          "billed": true
         },
         {
           "id": "dev-16",
           "number": "Course 21",
           "title": "Ongles en gel",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/BBU7F3",
+          "coassembleUrl": "https://coassemble.com/learn/SE8ZET",
           "iframeInPlatform": false,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/BBU7F3" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/SE8ZET" },
             "english": { "available": false, "url": "" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "",
-          "billed": false
+          "billed": true
         },
         {
           "id": "dev-17",
           "number": "Course 22",
           "title": "MASSAGE RELAXANT",
           "status": "Feedback Complete",
-          "coassembleUrl": "https://coassemble.com/learn/30T1YE",
+          "coassembleUrl": "https://coassemble.com/learn/GNMEBE",
           "iframeInPlatform": true,
           "practiceExerciseUrl": "",
           "translations": {
-            "french": { "available": true, "url": "https://coassemble.com/learn/0WZBHL" },
-            "english": { "available": true, "url": "https://coassemble.com/learn/30T1YE" },
+            "french": { "available": true, "url": "https://coassemble.com/learn/GNMEBE" },
+            "english": { "available": true, "url": "https://coassemble.com/learn/5X69Y8" },
             "arabic": { "available": false, "url": "" }
           },
           "iframeUrl": "https://e-lumy.com/course/massage-relaxant-in-progress",
-          "billed": false
+          "billed": true
         }
       ]
     }
